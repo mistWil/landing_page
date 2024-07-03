@@ -38,3 +38,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Fonction pour faire défiler vers le haut
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// Afficher ou masquer le bouton en fonction de la position de défilement
+window.onscroll = function() {
+  var btn = document.getElementById("scrollToTopBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.style.opacity = "1";
+  } else {
+    btn.style.opacity = "0";
+  }
+};
+
+// Ajouter un écouteur d'événements au bouton
+document.getElementById("scrollToTopBtn").addEventListener("click", scrollToTop);
