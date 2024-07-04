@@ -280,6 +280,41 @@ section {
 #scrollToTopBtn:hover {
   background-color: #333;
 }
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #6e5494;
+}
+
+.linkedin-link:hover {
+    color: #0077b5;
+}
+
+/* Styles pour la section Screenshot */
+#screenshot .screenshot-container {
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#screenshot .screenshot-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+#screenshot img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 /* Styles responsives */
 @media (max-width: 768px) {
     :root {
