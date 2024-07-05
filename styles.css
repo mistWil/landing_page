@@ -296,6 +296,26 @@ section {
 .linkedin-link:hover {
     color: #0077b5;
 }
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.social-item a {
+    margin-bottom: 5px;
+}
+
+.social-item span {
+    font-size: 12px;
+}
 
 /* Styles pour la section Screenshot */
 #screenshot .screenshot-container {
@@ -314,6 +334,15 @@ section {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Styles pour espacer les blocs dans la section "Qui sommes-nous" */
+#qui-sommes-nous .content-block {
+    margin-bottom: 6rem; /* Augmente l'espacement entre les blocs */
+}
+
+#qui-sommes-nous .content-block:last-child {
+    margin-bottom: 0; /* Supprime la marge du dernier bloc pour éviter un espace excessif en bas de la section */
 }
 /* Styles responsives */
 @media (max-width: 768px) {

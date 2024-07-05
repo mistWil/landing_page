@@ -54,6 +54,25 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Ajouter un gestionnaire d'événements pour le bouton de téléchargement
+    const downloadBtn = document.getElementById('download-btn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const exeUrl = './Protect-Yourself-Setup-1.0.0.exe';
+            
+            // Créer un élément <a> temporaire
+            const tempLink = document.createElement('a');
+            tempLink.href = exeUrl;
+            tempLink.download = 'Protect-Yourself-Setup-1.0.0.exe';
+            
+            // Ajouter l'élément au DOM, cliquer dessus, puis le supprimer
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
+        });
+    }
 });
 
 // Fonction pour faire défiler vers le haut de la page
